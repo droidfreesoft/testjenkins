@@ -4,7 +4,6 @@ pipeline {
     stage('Build') {
       steps {
         echo '$a y $b'
-        sh 'echo "$a y $b"'
       }
     }
   }
