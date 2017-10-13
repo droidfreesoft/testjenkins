@@ -3,8 +3,13 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'lolo'
+        echo '$a y $b'
+        sh 'echo "$a y $b"'
       }
     }
+  }
+  environment {
+    a = 'Esto es una A'
+    b = 'Esto es una B'
   }
 }
