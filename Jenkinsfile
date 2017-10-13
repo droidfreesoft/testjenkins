@@ -6,6 +6,15 @@ pipeline {
         echo '$a y $b'
       }
     }
+    stage('Test') {
+      agent any
+      environment {
+        c = 'aaaaaaa'
+      }
+      steps {
+        echo '"$c"'
+      }
+    }
   }
   environment {
     a = 'Esto es una A'
